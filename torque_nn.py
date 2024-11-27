@@ -1,6 +1,8 @@
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
+def external_torque(x):
+    return 1e-3*np.float_power(np.cos(2*x),2)*np.sin(3*x)
 
 step = np.pi*1e-4
 n = np.arange(start=0, stop=2*np.pi, step=step)
